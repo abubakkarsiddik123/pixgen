@@ -4,7 +4,7 @@ import Image from "next/image";
 const PhotoDetailsPage = async ({ params }) => {
   const { id } = await params;
 
-  const res = await fetch("https://pixgen-green-chi.vercel.app/data.json");
+  const res = await fetch("http://localhost:3000/data.json");
   const photos = await res.json();
 
   const photo = photos.find(
