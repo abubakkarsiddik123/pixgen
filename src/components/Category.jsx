@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 const Category = async () => {
-  const res = await fetch("http://localhost:3000/category.json");
+  const res = await fetch("https://pixgen-server-q59l.onrender.com/category");
   const categories = await res.json();
   console.log(categories);
   return (
