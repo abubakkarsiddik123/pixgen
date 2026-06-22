@@ -4,7 +4,7 @@ import React from 'react';
 
 const AllPhotosPage = async({searchParams}) => {
     const {category}=searchParams;
-     const res = await fetch("http://localhost:3000/data.json")
+     const res = await fetch("https://pixgen-server-q59l.onrender.com/photos")
     const photos = await res.json();
     const filteredPhotos = category ?  photos.filter(photo =>photo.category.toLowerCase() ==category.toLowerCase()) : photos
     return (
